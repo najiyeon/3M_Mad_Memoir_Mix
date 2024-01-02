@@ -1,0 +1,135 @@
+<!-- res/layout/main_page.xml -->
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="80dp"
+            android:background="@drawable/logo_3m"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/contentpagebox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_background"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/logo"
+            android:layout_marginTop="50dp"/>
+
+        <TextView
+            android:id="@+id/contentboxtext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:text="Member"
+            android:textColor="#FFFFFF"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/contentpagebox"
+            app:layout_constraintStart_toStartOf="@+id/contentpagebox"
+            app:layout_constraintTop_toTopOf="@+id/contentpagebox" />
+
+        <ImageButton
+            android:id="@+id/btnContactPage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/arrow_1"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            app:layout_constraintEnd_toEndOf="@id/contentpagebox"
+            app:layout_constraintTop_toTopOf="@+id/contentpagebox"
+            app:layout_constraintBottom_toBottomOf="@id/contentpagebox"
+            />
+
+        <ImageView
+            android:id="@+id/gallerypagebox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="70dp"
+            android:background="@drawable/button_background"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/contentpagebox"
+            android:layout_marginTop="30dp"/>
+
+        <TextView
+            android:id="@+id/galleryboxtext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:text="Memory"
+            android:textColor="#FFFFFF"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/gallerypagebox"
+            app:layout_constraintStart_toStartOf="@+id/gallerypagebox"
+            app:layout_constraintTop_toTopOf="@+id/gallerypagebox" />
+
+        <ImageButton
+            android:id="@+id/btnGalleryPage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/arrow_2"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            app:layout_constraintEnd_toEndOf="@id/gallerypagebox"
+            app:layout_constraintTop_toTopOf="@+id/gallerypagebox"
+            app:layout_constraintBottom_toBottomOf="@id/gallerypagebox"
+            />
+
+        <ImageView
+            android:id="@+id/thirdpagebox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="70dp"
+            android:background="@drawable/button_background"
+            app:layout_constraintTop_toBottomOf="@id/galleryboxtext"
+            android:layout_marginBottom="30dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/thirdboxtext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:text="MiniGame"
+            android:textColor="#FFFFFF"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/thirdpagebox"
+            app:layout_constraintStart_toStartOf="@+id/thirdpagebox"
+            app:layout_constraintTop_toTopOf="@+id/thirdpagebox" />
+
+        <ImageButton
+            android:id="@+id/btnThirdPage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/arrow_3"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            app:layout_constraintEnd_toEndOf="@id/thirdpagebox"
+            app:layout_constraintTop_toTopOf="@+id/thirdpagebox"
+            app:layout_constraintBottom_toBottomOf="@id/thirdpagebox"
+            />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

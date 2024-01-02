@@ -1,0 +1,164 @@
+[
+  {
+    "Name": "kim min su",
+    "Organization": "ABC Corporation",
+    "Phone": "010-1234-5678",
+    "Email": "kim@example.com"
+  },
+  {
+    "Name": "이영희",
+    "Organization": "XYZ Electronics",
+    "Phone": "010-2345-6789",
+    "Email": "lee@example.com"
+  },
+  {
+    "Name": "박민수",
+    "Organization": "123 Design",
+    "Phone": "010-3456-7890",
+    "Email": "park@example.com"
+  },
+  {
+    "Name": "최미영",
+    "Organization": "456 Consulting",
+    "Phone": "010-4567-8901",
+    "Email": "choi@example.com"
+  },
+  {
+    "Name": "홍길동",
+    "Organization": "789 Software",
+    "Phone": "010-5678-9012",
+    "Email": "hong@example.com"
+  },
+  {
+    "Name": "장승호",
+    "Organization": "999 Construction",
+    "Phone": "010-6789-0123",
+    "Email": "jang@example.com"
+  },
+  {
+    "Name": "신지수",
+    "Organization": "321 Marketing",
+    "Phone": "010-7890-1234",
+    "Email": "shin@example.com"
+  },
+  {
+    "Name": "김하늘",
+    "Organization": "876 Media",
+    "Phone": "010-8901-2345",
+    "Email": "kim@example.com"
+  },
+  {
+    "Name": "이성민",
+    "Organization": "555 Medical",
+    "Phone": "010-9012-3456",
+    "Email": "lee@example.com"
+  },
+  {
+    "Name": "정지영",
+    "Organization": "111 Login",
+    "Phone": "010-0123-4567",
+    "Email": "jung@example.com"
+  },
+  {
+    "Name": "박지호",
+    "Organization": "234 Technology",
+    "Phone": "010-2345-6789",
+    "Email": "park@example.com"
+  },
+  {
+    "Name": "한미래",
+    "Organization": "567 Research Institute",
+    "Phone": "010-3456-7890",
+    "Email": "han@example.com"
+  },
+  {
+    "Name": "김민지",
+    "Organization": "890 Design",
+    "Phone": "010-4567-8901",
+    "Email": "kim@example.com"
+  },
+  {
+    "Name": "송현우",
+    "Organization": "432 Software",
+    "Phone": "010-5678-9012",
+    "Email": "song@example.com"
+  },
+  {
+    "Name": "이승현",
+    "Organization": "555 Construction",
+    "Phone": "010-6789-0123",
+    "Email": "lee@example.com"
+  },
+  {
+    "Name": "박지영",
+    "Organization": "987 Marketing",
+    "Phone": "010-7890-1234",
+    "Email": "park@example.com"
+  },
+  {
+    "Name": "한지수",
+    "Organization": "876 Media",
+    "Phone": "010-8901-2345",
+    "Email": "han@example.com"
+  },
+  {
+    "Name": "김승민",
+    "Organization": "111 Medical",
+    "Phone": "010-9012-3456",
+    "Email": "kim@example.com"
+  },
+  {
+    "Name": "이지원",
+    "Organization": "222 Login",
+    "Phone": "010-0123-4567",
+    "Email": "lee@example.com"
+  },
+  {
+    "Name": "최재현",
+    "Organization": "333 Technology",
+    "Phone": "010-2345-6789",
+    "Email": "choi@example.com"
+  },
+  {
+    "Name": "박영수",
+    "Organization": "444 Software",
+    "Phone": "010-3456-7890",
+    "Email": "park@example.com"
+  },
+  {
+    "Name": "이미라",
+    "Organization": "555 Design",
+    "Phone": "010-4567-8901",
+    "Email": "lee@example.com"
+  },
+  {
+    "Name": "장민우",
+    "Organization": "666 Construction",
+    "Phone": "010-5678-9012",
+    "Email": "jang@example.com"
+  },
+  {
+    "Name": "김현아",
+    "Organization": "777 Marketing",
+    "Phone": "010-6789-0123",
+    "Email": "kim@example.com"
+  },
+  {
+    "Name": "오준호",
+    "Organization": "888 Media",
+    "Phone": "010-7890-1234",
+    "Email": "oh@example.com"
+  },
+  {
+    "Name": "유지훈",
+    "Organization": "999 Medical",
+    "Phone": "010-8901-2345",
+    "Email": "yu@example.com"
+  },
+  {
+    "Name": "임세영",
+    "Organization": "123 Login",
+    "Phone": "010-9012-3456",
+    "Email": "lim@example.com"
+  }
+]

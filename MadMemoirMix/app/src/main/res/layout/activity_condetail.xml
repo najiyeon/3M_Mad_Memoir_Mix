@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageButton
+        android:id="@+id/icon_back"
+        android:contentDescription="뒤로가기"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/icon_back"
+        android:background="@drawable/bg_white_ripple"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/person_picture"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/icon_person"
+        />
+
+    <TextView
+        android:id="@+id/person_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/palanquin_regular"
+        android:text="홍길동"
+        android:textColor="#000000"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/person_picture"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/person_institute"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/palanquin_regular"
+        android:text="삼성전자"
+        android:textColor="#9C9C9C"
+        android:textSize="25sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/person_name"/>
+
+    <TextView
+        android:id="@+id/person_phone"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:fontFamily="@font/palanquin_regular"
+        android:textColor="@color/black"
+        android:maxLines="1"
+        android:text="010-1234-5678"
+        android:textAlignment="center"
+        android:textSize="35sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/person_institute" />
+
+    <TextView
+        android:id="@+id/person_email"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:fontFamily="@font/palanquin_regular"
+        android:textColor="@color/black"
+        android:maxLines="1"
+        android:text="abceqk@gmail.com"
+        android:textAlignment="center"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/person_phone"/>
+
+    <View
+        android:id="@+id/emptyView"
+        android:layout_width="1dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/person_email"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="60dp"
+        />
+
+    <ImageButton
+        android:id="@+id/btnCall"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:background="@drawable/corner_rectangle"
+        android:foreground="@drawable/bg_white_ripple"
+        app:layout_constraintTop_toBottomOf="@id/person_email"
+        app:layout_constraintEnd_toStartOf="@id/emptyView"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="10dp" />
+
+    <ImageView
+        android:id="@+id/icon_call"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="@drawable/icon_phone"
+        app:layout_constraintStart_toStartOf="@id/btnCall"
+        android:layout_marginStart="15dp"
+        app:layout_constraintTop_toTopOf="@id/btnCall"
+        app:layout_constraintBottom_toBottomOf="@id/btnCall"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Call"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:layout_marginStart="30dp"
+        app:layout_constraintStart_toEndOf="@id/icon_call"
+        app:layout_constraintTop_toTopOf="@id/btnCall"
+        app:layout_constraintBottom_toBottomOf="@id/btnCall" />
+
+    <ImageButton
+        android:id="@+id/btnMessage"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:background="@drawable/corner_rectangle"
+        android:foreground="@drawable/bg_white_ripple"
+        app:layout_constraintTop_toBottomOf="@id/person_email"
+        app:layout_constraintStart_toEndOf="@id/emptyView"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="30dp" />
+
+    <ImageView
+        android:id="@+id/icon_message"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:background="@drawable/icon_message"
+        app:layout_constraintStart_toStartOf="@id/btnMessage"
+        android:layout_marginStart="10dp"
+        app:layout_constraintTop_toTopOf="@id/btnMessage"
+        app:layout_constraintBottom_toBottomOf="@id/btnMessage"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Message"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:layout_marginStart="8dp"
+        app:layout_constraintStart_toEndOf="@id/icon_message"
+        app:layout_constraintTop_toTopOf="@id/btnMessage"
+        app:layout_constraintBottom_toBottomOf="@id/btnMessage" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/navigationBar"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:background="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:itemIconTint="#000000"
+        app:itemTextColor="#000000"
+        app:labelVisibilityMode="labeled"
+        app:menu="@menu/bottom_navigation_tab" >
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

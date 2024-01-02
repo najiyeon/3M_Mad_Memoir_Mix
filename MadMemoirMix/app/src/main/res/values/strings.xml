@@ -1,0 +1,42 @@
+<resources>
+    <string name="app_name">MadMemoirMix</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+    <string name="first">First</string>
+    <string name="second">Second</string>
+    <string name="third">Third</string>
+    <string name="lee"><u> 이순신 게임 하러가기 &gt;&gt; </u></string>
+    <string name="back"><u> &lt;&lt; 기본 화면으로 </u></string>
+    <string name="manual_title"> 🍻 이순신 게임 하는 법 🍻 </string>
+    <string name="manual_content1">한번쯤 그런 날이 있죠… 내일이 없는 사람처럼 마시고 싶은 밤🌙.. 내일이면 기억과 간을 모두 잃을 수 있는 게임이 있습니다. 여러분도 청춘을 즐기고 싶으신가요?🔥 이순신 게임으로 뜨거운 밤을 보내시는 건 어떨까요?🤮</string>
+    <string name="manual_content2">하는 방법은 다음과 같습니다.</string>
+    <string name="manual_content3">우선 큼지막한 술잔을 준비해주고, 원으로 둘러 앉아 게임을 진행할 방향을 정합니다. 차례대로 돌아가며 자신의 순서가 되면 술잔에 자신이 원하는 만큼 술을 따릅니다. 술을 따른 뒤 100원짜리 동전 두 개를 던집니다. 동전이 어떻게 나오느냐에 따라 당신의 운명이 결정됩니다.</string>
+    <string name="manual_content4">1. 이순신(앞면) 두개 » 술잔에 있는 술을 다 마신다 🤑</string>
+    <string name="manual_content5">2. 백(뒷면) 두개 » 진행 방향을 반대로 한다 🔙</string>
+    <string name="manual_content6">3. 이순신(앞면) 하나, 백(뒷면) 하나 » 다음 차례로 술잔을 넘긴다</string>
+    <string name="manual_content7">장을 비워내고 추억을 채워 넣어보세요! 🎉</string>
+    <string name="result_content1">축하합니다!</string>
+    <string name="result_content2">당신은 이순신입니다!</string>
+    <string name="result_content3">술잔에 있는 술을 다 마시고, 다음 차례로 술잔을 넘기세요!</string>
+
+    <string name="dicegame"><u> 주사위 게임 하러가기 &gt;&gt; </u></string>
+    <string name="dice_manual_title"> 🎲 주사위 게임 하는 법 🎲 </string>
+    <string name="dice_manual_content1">다들 어릴적 주사위를 가지고 놀았던 추억 하나쯤은 있죠.👶🏻 오늘은 그 추억 속으로 돌아가 주사위 게임 한 판 어떠신가요?</string>
+    <string name="dice_manual_content2">하는 방법은 간단합니다.</string>
+    <string name="dice_manual_content3">먼저 게임을 진행할 순서를 정해주세요.(주사위를 던져서 정하면 좋겠죠?😉) \n\n
+        그리고 인원 수에 따라 마실 술의 양을 정해주세요.(ex. 8명이라 한다면 4병 정도 어떠신가요?😇) \n\n
+        그런 다음 차례대로 주사위를 던지고, 나온 숫자만큼 술잔에 술을 따라 마시고, 다음 차례로 넘어갑니다. \n\n
+        이 과정을 반복하다가 할당된 술이 모두 비워지면 게임이 끝납니다.</string>
+    <string name="dice_manual_content4">술도 마시면서 순수함까지 챙기는 주사위 게임👻 정말 재미있을 것 같지 않나요!?</string>
+    <string name="dice_manual_content5">장을 비워내고 추억을 채워 넣어보세요! 🎉</string>
+
+    <string name="lorem_ipsum">
+Hello, World!
+    </string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
