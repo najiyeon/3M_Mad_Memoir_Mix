@@ -5,12 +5,15 @@ import android.content.Intent
 import android.view.View
 import android.view.ViewGroup
 import android.widget.BaseAdapter
+import android.widget.Button
 import android.widget.ImageView
+import android.widget.RelativeLayout
+import android.widget.ToggleButton
 import com.bumptech.glide.Glide
 
-class ImageAdapter(private val context: Context) : BaseAdapter() {
+class ImageAdapter(private val context: Context, val folderId: Int) : BaseAdapter() {
 
-    private val dummyImages = intArrayOf(
+    private val Images = intArrayOf(
         R.drawable.gallery_image_01,
         R.drawable.gallery_image_02,
         R.drawable.gallery_image_03,
@@ -31,11 +34,13 @@ class ImageAdapter(private val context: Context) : BaseAdapter() {
         R.drawable.gallery_image_18,
         R.drawable.gallery_image_19,
         R.drawable.gallery_image_20,
-
-        // Add more dummy image resource IDs as needed
+        R.drawable.gallery_image_21,
     )
 
+    private val dummyImages = Images.sliceArray(7*folderId..7*folderId+6)
     private val targetImageSize: Int = calculateTargetImageSize(context)
+    private var scaleType: ImageView.ScaleType = ImageView.ScaleType.CENTER_CROP
+
 
     private fun calculateTargetImageSize(context: Context): Int {
         // Adjust this value based on the desired size of your images
@@ -60,17 +65,17 @@ class ImageAdapter(private val context: Context) : BaseAdapter() {
         if (convertView == null) {
             imageView = ImageView(context)
             imageView.layoutParams = ViewGroup.LayoutParams(targetImageSize, targetImageSize)
-            imageView.scaleType = ImageView.ScaleType.CENTER_CROP
             imageView.setPadding(8, 8, 8, 8)
         } else {
             imageView = convertView as ImageView
         }
 
+        imageView.scaleType = scaleType
+
         // Load and set the image for the current position using Glide
         val imageResId = dummyImages[position]
         Glide.with(context)
             .load(imageResId)
-            .centerCrop()
             .into(imageView)
 
         // Handle item click to show larger view
@@ -78,9 +83,15 @@ class ImageAdapter(private val context: Context) : BaseAdapter() {
             // Pass both imageResId and position to ImageDetailActivity
             val intent = Intent(context, ImageDetailActivity::class.java)
             intent.putExtra(ImageDetailActivity.EXTRA_POSITION, position)
+            intent.putExtra(ImageDetailActivity.FOLDER_POSITION, folderId)
             context.startActivity(intent)
         }
 
         return imageView
+    }
+
+    fun setScaleType(newScaleType: ImageView.ScaleType) {
+        scaleType = newScaleType
+        notifyDataSetChanged()
     }
 }
