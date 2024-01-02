@@ -3,6 +3,7 @@ package com.example.MadMemoirMix
 import android.content.Intent
 import android.os.Bundle
 import android.widget.ImageButton
+import android.widget.ImageView
 import android.widget.ToggleButton
 import androidx.appcompat.app.AppCompatActivity
 
@@ -15,7 +16,14 @@ class GalleryActivity : AppCompatActivity() {
 
         val backButton = findViewById<ImageButton>(R.id.icon_back)
         backButton.setOnClickListener {
-            navigateToPage(MainActivity::class.java)
+            // if fragment stack is empty, finish activity
+            if (supportFragmentManager.backStackEntryCount == 1 || supportFragmentManager.backStackEntryCount == 0) {
+                navigateToPage(MainActivity::class.java)
+            }
+            // else pop fragment stack
+            else {
+                supportFragmentManager.popBackStack()
+            }
         }
 
         supportFragmentManager.beginTransaction()
@@ -23,7 +31,7 @@ class GalleryActivity : AppCompatActivity() {
             .addToBackStack(null)
             .commit()
 
-        // Image ratio toggle
+//        // Image ratio toggle
 //        val toggleButton: ToggleButton = findViewById(R.id.toggleButton)
 //        toggleButton.setOnCheckedChangeListener { _, isChecked ->
 //            if (isChecked) {

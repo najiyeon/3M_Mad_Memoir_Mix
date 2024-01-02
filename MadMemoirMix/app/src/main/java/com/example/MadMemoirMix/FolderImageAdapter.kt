@@ -1,21 +1,18 @@
 package com.example.MadMemoirMix
 
 import android.content.Context
-import android.content.Intent
 import android.view.View
 import android.view.ViewGroup
 import android.widget.BaseAdapter
-import android.widget.Button
 import android.widget.ImageView
-import android.widget.RelativeLayout
 import androidx.fragment.app.FragmentManager
 import com.bumptech.glide.Glide
 
 class FolderImageAdapter(private val context: Context, fragmentManager : FragmentManager) : BaseAdapter() {
     private val targetImageSize: Int = calculateTargetImageSize(context)
-    private var folder1 = Folder1()
-    private var folder2 = Folder2()
-    private var folder3 = Folder3()
+    private var folderin1Fragment = Forderin1Fragment()
+    private var forderin2Fragment = Forderin2Fragment()
+    private var forderin3Fragment = Forderin3Fragment()
     private var mFragmentManager : FragmentManager
 
     init {
@@ -68,21 +65,21 @@ class FolderImageAdapter(private val context: Context, fragmentManager : Fragmen
         if (position == 0) {
             imageView.setOnClickListener {
                 mFragmentManager.beginTransaction()
-                    .replace(R.id.imageGalleryLayout, folder1)
+                    .replace(R.id.imageGalleryLayout, folderin1Fragment)
                     .addToBackStack(null)
                     .commit()
             }
         } else if (position == 1) {
             imageView.setOnClickListener {
                 mFragmentManager.beginTransaction()
-                    .replace(R.id.imageGalleryLayout, folder2)
+                    .replace(R.id.imageGalleryLayout, forderin2Fragment)
                     .addToBackStack(null)
                     .commit()
             }
-        } else {
+        } else if (position == 2) {
             imageView.setOnClickListener {
                 mFragmentManager.beginTransaction()
-                    .replace(R.id.imageGalleryLayout, folder3)
+                    .replace(R.id.imageGalleryLayout, forderin3Fragment)
                     .addToBackStack(null)
                     .commit()
             }

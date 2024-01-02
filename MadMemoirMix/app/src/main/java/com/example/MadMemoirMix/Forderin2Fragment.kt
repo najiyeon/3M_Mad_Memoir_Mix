@@ -8,7 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.GridView
 
-class Folder3 : Fragment() {
+class Forderin2Fragment : Fragment() {
     private lateinit var galleryActivity: GalleryActivity
     private lateinit var imageAdapter: ImageAdapter
 
@@ -28,9 +28,9 @@ class Folder3 : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        val view = inflater.inflate(R.layout.fragment_folder1, container, false)
+        val view = inflater.inflate(R.layout.fragment_folder_in, container, false)
         val gridView: GridView = view.findViewById(R.id.imageGridView)
-        imageAdapter = ImageAdapter(galleryActivity, 2)
+        imageAdapter = ImageAdapter(galleryActivity, 1)
         gridView.adapter = imageAdapter
 
         return view
@@ -39,7 +39,7 @@ class Folder3 : Fragment() {
     companion object {
         @JvmStatic
         fun newInstance(param1: String, param2: String) =
-            Folder3().apply {
+            Forderin2Fragment().apply {
                 arguments = Bundle().apply {
                 }
             }

@@ -14,7 +14,8 @@ class ImageDetailActivity : AppCompatActivity() {
 
         val backButton = findViewById<ImageButton>(R.id.icon_back)
         backButton.setOnClickListener {
-            navigateToPage(GalleryActivity::class.java)
+            // go back to gallery fragment
+            finish()
         }
 
         val imageAdapter = ImageAdapter(this, intent.getIntExtra(FOLDER_POSITION, 0))
