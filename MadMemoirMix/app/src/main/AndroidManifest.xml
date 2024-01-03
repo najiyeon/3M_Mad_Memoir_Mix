@@ -28,7 +28,6 @@
         <activity android:name=".ContactActivity"></activity>
         <activity android:name=".GalleryActivity"></activity>
         <activity android:name=".MinigameActivity"></activity>
-        <activity android:name=".MemoActivity"></activity>
         <activity android:name=".CondetailActivity"></activity>
         <activity android:name=".ImageDetailActivity"></activity>
     </application>
