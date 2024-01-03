@@ -69,11 +69,9 @@
 
 <img src="https://github.com/najiyeon/3M_Mad_Memoir_Mix/assets/113894257/9a85b317-9e6e-4f51-8ade-164d211d3641" width="250"></img>
 
-
-https://github.com/najiyeon/3M_Mad_Memoir_Mix/assets/113894257/7ff2ea71-3e56-45d6-b857-0e4b06fbf273
-
 https://github.com/najiyeon/3M_Mad_Memoir_Mix/assets/113894257/8c6d6142-07c0-4367-9eb9-b4b7b030c7a3
 
+https://github.com/najiyeon/3M_Mad_Memoir_Mix/assets/113894257/f6c62bd2-df7a-4aad-81b3-a9025599334b
 
 <br/>
 
