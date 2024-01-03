@@ -49,6 +49,31 @@
 ## Preview
 **Intro: Splash**
 
+<img src="https://github.com/najiyeon/3M_Mad_Memoir_Mix/assets/113894257/b222d28f-256d-464e-9266-05049fd8baad" width="250"></img> &emsp; <img src="https://github.com/najiyeon/3M_Mad_Memoir_Mix/assets/113894257/36dcdf26-59b6-4552-85fd-d481604b5b03" width="250"></img>
+
+<br/>
+
+**Member**
+
+<img src="https://github.com/najiyeon/3M_Mad_Memoir_Mix/assets/113894257/a6a98c84-7f9a-4c82-a9f2-dabbea77025d" width="250"></img> &emsp; <img src="https://github.com/najiyeon/3M_Mad_Memoir_Mix/assets/113894257/c0c450f0-1080-4f7e-8282-52ef94bd141c" width="250"></img>
+
+<br/>
+
+**Memory**
+
+<img src="https://github.com/najiyeon/3M_Mad_Memoir_Mix/assets/113894257/666b0858-5748-4d1c-86e5-97358c17f825" width="250"></img> &emsp; <img src="https://github.com/najiyeon/3M_Mad_Memoir_Mix/assets/113894257/7f67faca-4b03-4dcc-8300-354d9141f264" width="250"></img>
+
+<br/>
+
+**Minigame**
+
+<img src="https://github.com/najiyeon/3M_Mad_Memoir_Mix/assets/113894257/9a85b317-9e6e-4f51-8ade-164d211d3641" width="250"></img>
+
+
+https://github.com/najiyeon/3M_Mad_Memoir_Mix/assets/113894257/7ff2ea71-3e56-45d6-b857-0e4b06fbf273
+
+https://github.com/najiyeon/3M_Mad_Memoir_Mix/assets/113894257/8c6d6142-07c0-4367-9eb9-b4b7b030c7a3
+
 
 <br/>
 
