@@ -5,36 +5,50 @@ import android.content.Intent
 import android.view.View
 import android.view.ViewGroup
 import android.widget.BaseAdapter
-import android.widget.Button
 import android.widget.ImageView
-import android.widget.RelativeLayout
-import android.widget.ToggleButton
 import com.bumptech.glide.Glide
 
 class ImageAdapter(private val context: Context) : BaseAdapter() {
 
     private val dummyImages = intArrayOf(
-        R.drawable.gallery_image_01,
-        R.drawable.gallery_image_02,
-        R.drawable.gallery_image_03,
-        R.drawable.gallery_image_04,
-        R.drawable.gallery_image_05,
-        R.drawable.gallery_image_06,
-        R.drawable.gallery_image_07,
-        R.drawable.gallery_image_08,
-        R.drawable.gallery_image_09,
-        R.drawable.gallery_image_10,
-        R.drawable.gallery_image_11,
-        R.drawable.gallery_image_12,
-        R.drawable.gallery_image_13,
-        R.drawable.gallery_image_14,
-        R.drawable.gallery_image_15,
-        R.drawable.gallery_image_16,
-        R.drawable.gallery_image_17,
-        R.drawable.gallery_image_18,
-        R.drawable.gallery_image_19,
-        R.drawable.gallery_image_20,
-        R.drawable.gallery_image_21,
+        R.drawable.happy_new_year_1,
+        R.drawable.happy_new_year_2,
+        R.drawable.happy_new_year_3,
+        R.drawable.background_4,
+        R.drawable.background_2,
+        R.drawable.background_3,
+        R.drawable.background_5,
+        R.drawable.background_6,
+        R.drawable.background_1,
+        R.drawable.background_7,
+        R.drawable.background_8,
+        R.drawable.cloud_1,
+        R.drawable.cloud_2,
+        R.drawable.dummy_1,
+        R.drawable.dummy_2,
+        R.drawable.dummy_3,
+        R.drawable.dummy_4,
+        R.drawable.dummy_5,
+        R.drawable.dummy_6,
+        R.drawable.dummy_7,
+        R.drawable.dummy_8,
+        R.drawable.gallery_image_22,
+        R.drawable.gallery_image_23,
+        R.drawable.gallery_image_24,
+        R.drawable.gallery_image_25,
+        R.drawable.gallery_image_26,
+        R.drawable.gallery_image_27,
+        R.drawable.gallery_image_28,
+        R.drawable.gallery_image_29,
+        R.drawable.gallery_image_30,
+        R.drawable.gallery_image_31,
+        R.drawable.gallery_image_32,
+        R.drawable.gallery_image_33,
+        R.drawable.gallery_image_34,
+        R.drawable.gallery_image_35,
+        R.drawable.gallery_image_36,
+        R.drawable.gallery_image_37,
+        R.drawable.gallery_image_38,
     )
 
     private val targetImageSize: Int = calculateTargetImageSize(context)
