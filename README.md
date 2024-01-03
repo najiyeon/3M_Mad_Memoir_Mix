@@ -4,7 +4,7 @@
 
 
 ## Outline
-<img src="https://github.com/najiyeon/3M_Mad_Memoir_Mix/assets/113894257/f79ea7fd-abf9-46e6-ad58-fe4bbaec736f" width="200"></img>
+<img src="https://github.com/najiyeon/3M_Mad_Memoir_Mix/assets/113894257/f79ea7fd-abf9-46e6-ad58-fe4bbaec736f" width="200"></img>  <img src="https://github.com/najiyeon/3M_Mad_Memoir_Mix/assets/113894257/24dcd24f-669b-4eca-9e6b-1285874f04de" width="350"></img>
 
 <br/>
 
@@ -48,6 +48,7 @@
 
 ## Preview
 **Intro: Splash**
+
 
 <br/>
 
