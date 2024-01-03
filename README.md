@@ -22,7 +22,7 @@
 ## Tech Stack
 **Front-end** : Kotlin
 
-**Back-end** : not implemented
+**IDE** : Android Studio
 
 <br/>
 
