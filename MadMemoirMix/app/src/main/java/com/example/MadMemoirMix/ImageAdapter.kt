@@ -90,7 +90,6 @@ class ImageAdapter(private val context: Context) : BaseAdapter() {
             imageView.layoutParams = ViewGroup.LayoutParams(targetImageSize, targetImageSize)
             imageView.setPadding(8, 8, 8, 8)
 
-
             // Add foreground to the FrameLayout to enable ripple effect
             frameLayout.foreground = ContextCompat.getDrawable(context, R.drawable.ripple_effect)
 
