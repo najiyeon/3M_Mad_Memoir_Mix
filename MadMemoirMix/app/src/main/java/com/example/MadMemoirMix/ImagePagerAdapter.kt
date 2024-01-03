@@ -43,9 +43,9 @@ class ImagePagerAdapter(private val context: Context, private val imageAdapter: 
         val imageSizeText = "${imageSize.first} x ${imageSize.second}"
         val imageFileSize = getImageFileSize(context, imageResId)
 
-        view.findViewById<TextView>(R.id.imageNameTextView).text = "Image Name: $imageName"
-        view.findViewById<TextView>(R.id.imageSizeTextView).text = "Image Size: $imageSizeText"
-        view.findViewById<TextView>(R.id.imageFileSizeTextView).text = "File Size: $imageFileSize"
+        view.findViewById<TextView>(R.id.imageNameTextView).text = "$imageName"
+        view.findViewById<TextView>(R.id.imageSizeTextView).text = "$imageSizeText"
+        view.findViewById<TextView>(R.id.imageFileSizeTextView).text = "$imageFileSize"
 
         // Make sure the bottom sheet is displayed above the ViewPager
         ViewCompat.setNestedScrollingEnabled(view.findViewById(R.id.bottomSheetLayout), true)
