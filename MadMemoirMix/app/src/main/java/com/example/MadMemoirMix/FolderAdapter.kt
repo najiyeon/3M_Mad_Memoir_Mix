@@ -1,6 +1,7 @@
 package com.example.MadMemoirMix
 
 import android.content.Context
+import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.BaseAdapter
@@ -8,11 +9,9 @@ import android.widget.ImageView
 import androidx.fragment.app.FragmentManager
 import com.bumptech.glide.Glide
 
-class FolderImageAdapter(private val context: Context, fragmentManager : FragmentManager) : BaseAdapter() {
+class FolderAdapter(private val context: Context, fragmentManager : FragmentManager) : BaseAdapter() {
     private val targetImageSize: Int = calculateTargetImageSize(context)
-    private var folderin1Fragment = Forderin1Fragment()
-    private var forderin2Fragment = Forderin2Fragment()
-    private var forderin3Fragment = Forderin3Fragment()
+    private var folderinFragment = ForderinFragment()
     private var mFragmentManager : FragmentManager
 
     init {
@@ -47,12 +46,17 @@ class FolderImageAdapter(private val context: Context, fragmentManager : Fragmen
     override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
         val imageView: ImageView
         if (convertView == null) {
-            imageView = ImageView(context)
-            imageView.layoutParams = ViewGroup.LayoutParams(targetImageSize, targetImageSize)
-            imageView.scaleType = ImageView.ScaleType.CENTER_CROP
-            imageView.setPadding(8, 8, 8, 8)
+            // If convertView is null, inflate the layout from folder_item.xml
+            val inflater = context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
+            val view = inflater.inflate(R.layout.forder_item, parent, false)
+
+            // Assuming folder_item.xml contains an ImageView with id "imageView"
+            imageView = view.findViewById(R.id.imageView)
+//            imageView.layoutParams = ViewGroup.LayoutParams(targetImageSize, targetImageSize)
+//            imageView.scaleType = ImageView.ScaleType.CENTER_CROP
+//            imageView.setPadding(8, 8, 8, 8)
         } else {
-            imageView = convertView as ImageView
+            imageView = convertView.findViewById(R.id.imageView) as ImageView
         }
 
         // Load and set the image for the current position using Glide
@@ -65,21 +69,7 @@ class FolderImageAdapter(private val context: Context, fragmentManager : Fragmen
         if (position == 0) {
             imageView.setOnClickListener {
                 mFragmentManager.beginTransaction()
-                    .replace(R.id.imageGalleryLayout, folderin1Fragment)
-                    .addToBackStack(null)
-                    .commit()
-            }
-        } else if (position == 1) {
-            imageView.setOnClickListener {
-                mFragmentManager.beginTransaction()
-                    .replace(R.id.imageGalleryLayout, forderin2Fragment)
-                    .addToBackStack(null)
-                    .commit()
-            }
-        } else if (position == 2) {
-            imageView.setOnClickListener {
-                mFragmentManager.beginTransaction()
-                    .replace(R.id.imageGalleryLayout, forderin3Fragment)
+                    .replace(R.id.imageGalleryLayout, folderinFragment)
                     .addToBackStack(null)
                     .commit()
             }

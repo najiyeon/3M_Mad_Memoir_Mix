@@ -10,7 +10,7 @@ import android.widget.GridView
 
 class FolderFragment : Fragment() {
     private lateinit var galleryActivity: GalleryActivity
-    private lateinit var folderAdapter: FolderImageAdapter
+    private lateinit var folderAdapter: FolderAdapter
 
     private lateinit var imageAdapter: ImageAdapter
 
@@ -32,7 +32,7 @@ class FolderFragment : Fragment() {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_folder, container, false)
         val gridView: GridView = view.findViewById(R.id.folderGridView)
-        folderAdapter = FolderImageAdapter(galleryActivity, parentFragmentManager)
+        folderAdapter = FolderAdapter(galleryActivity, parentFragmentManager)
         gridView.adapter = folderAdapter
 
         return view

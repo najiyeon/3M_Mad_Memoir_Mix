@@ -8,7 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.GridView
 
-class Forderin1Fragment : Fragment() {
+class ForderinFragment : Fragment() {
     private lateinit var galleryActivity: GalleryActivity
     private lateinit var imageAdapter: ImageAdapter
 
@@ -39,7 +39,7 @@ class Forderin1Fragment : Fragment() {
     companion object {
         @JvmStatic
         fun newInstance(param1: String, param2: String) =
-            Forderin1Fragment().apply {
+            ForderinFragment().apply {
                 arguments = Bundle().apply {
                 }
             }

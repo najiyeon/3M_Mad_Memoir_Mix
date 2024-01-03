@@ -31,16 +31,6 @@ class GalleryActivity : AppCompatActivity() {
             .addToBackStack(null)
             .commit()
 
-//        // Image ratio toggle
-//        val toggleButton: ToggleButton = findViewById(R.id.toggleButton)
-//        toggleButton.setOnCheckedChangeListener { _, isChecked ->
-//            if (isChecked) {
-//                imageAdapter.setScaleType(ImageView.ScaleType.CENTER_INSIDE)
-//            } else {
-//                imageAdapter.setScaleType(ImageView.ScaleType.CENTER_CROP)
-//            }
-//        }
-
         // bottom navigation
         val bottomNavigationView = findViewById<com.google.android.material.bottomnavigation.BottomNavigationView>(R.id.navigationBar)
         bottomNavigationView.selectedItemId = R.id.menu_Gallery
