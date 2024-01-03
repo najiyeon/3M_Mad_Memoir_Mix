@@ -42,7 +42,7 @@ class ImagePagerAdapter(private val context: Context, private val imageAdapter: 
     private fun showBottomSheetDialog(context: Context, position: Int) {
         val view = LayoutInflater.from(context).inflate(R.layout.bottom_sheet_layout, null)
 //        val bottomSheetDialog = BottomSheetDialog(context)
-         val bottomSheetDialog = BottomSheetDialog(context, R.style.TransparentBottomSheetDialogTheme)
+         val bottomSheetDialog = BottomSheetDialog(context, R.style.TransparentDialog)
         bottomSheetDialog.setContentView(view)
 
         val imageResId = imageAdapter.getItem(position) as Int
