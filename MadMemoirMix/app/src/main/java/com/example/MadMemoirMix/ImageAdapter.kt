@@ -11,9 +11,9 @@ import android.widget.RelativeLayout
 import android.widget.ToggleButton
 import com.bumptech.glide.Glide
 
-class ImageAdapter(private val context: Context, val folderId: Int) : BaseAdapter() {
+class ImageAdapter(private val context: Context) : BaseAdapter() {
 
-    private val Images = intArrayOf(
+    private val dummyImages = intArrayOf(
         R.drawable.gallery_image_01,
         R.drawable.gallery_image_02,
         R.drawable.gallery_image_03,
@@ -37,7 +37,6 @@ class ImageAdapter(private val context: Context, val folderId: Int) : BaseAdapte
         R.drawable.gallery_image_21,
     )
 
-    private val dummyImages = Images.sliceArray(7*folderId..7*folderId+6)
     private val targetImageSize: Int = calculateTargetImageSize(context)
     private var scaleType: ImageView.ScaleType = ImageView.ScaleType.CENTER_CROP
 
@@ -83,7 +82,6 @@ class ImageAdapter(private val context: Context, val folderId: Int) : BaseAdapte
             // Pass both imageResId and position to ImageDetailActivity
             val intent = Intent(context, ImageDetailActivity::class.java)
             intent.putExtra(ImageDetailActivity.EXTRA_POSITION, position)
-            intent.putExtra(ImageDetailActivity.FOLDER_POSITION, folderId)
             context.startActivity(intent)
         }
 
