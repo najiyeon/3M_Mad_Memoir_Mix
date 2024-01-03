@@ -89,7 +89,7 @@ class ImageAdapter(private val context: Context) : BaseAdapter() {
             imageView = ImageView(context)
             imageView.layoutParams = ViewGroup.LayoutParams(targetImageSize, targetImageSize)
             imageView.setPadding(8, 8, 8, 8)
-            imageView.scaleType = scaleType
+
 
             // Add foreground to the FrameLayout to enable ripple effect
             frameLayout.foreground = ContextCompat.getDrawable(context, R.drawable.ripple_effect)
@@ -99,6 +99,8 @@ class ImageAdapter(private val context: Context) : BaseAdapter() {
             frameLayout = convertView as FrameLayout
             imageView = frameLayout.getChildAt(0) as ImageView
         }
+
+        imageView.scaleType = scaleType
 
         // Load and set the image for the current position using Glide
         val imageResId = dummyImages[position]

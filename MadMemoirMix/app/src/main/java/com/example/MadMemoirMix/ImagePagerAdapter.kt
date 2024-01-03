@@ -2,6 +2,7 @@ package com.example.MadMemoirMix
 
 import android.content.Context
 import android.graphics.BitmapFactory
+import android.icu.text.SimpleDateFormat
 import android.net.Uri
 import android.view.LayoutInflater
 import android.view.View
@@ -9,8 +10,14 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.core.view.ViewCompat
+import androidx.exifinterface.media.ExifInterface
 import androidx.viewpager.widget.PagerAdapter
+import com.drew.imaging.ImageMetadataReader
+import com.drew.metadata.exif.ExifSubIFDDirectory
 import com.google.android.material.bottomsheet.BottomSheetDialog
+import java.io.File
+import java.io.IOException
+import java.io.InputStream
 
 class ImagePagerAdapter(private val context: Context, private val imageAdapter: ImageAdapter) : PagerAdapter() {
 
@@ -42,10 +49,12 @@ class ImagePagerAdapter(private val context: Context, private val imageAdapter: 
         val imageSize = getImageSize(context, imageResId)
         val imageSizeText = "${imageSize.first} x ${imageSize.second}"
         val imageFileSize = getImageFileSize(context, imageResId)
+        val imageDate = getImageDate(context, imageResId)
 
         view.findViewById<TextView>(R.id.imageNameTextView).text = "$imageName"
         view.findViewById<TextView>(R.id.imageSizeTextView).text = "$imageSizeText"
         view.findViewById<TextView>(R.id.imageFileSizeTextView).text = "$imageFileSize"
+        view.findViewById<TextView>(R.id.imageDateTextView).text = "$imageDate"
 
         // Make sure the bottom sheet is displayed above the ViewPager
         ViewCompat.setNestedScrollingEnabled(view.findViewById(R.id.bottomSheetLayout), true)
@@ -77,6 +86,25 @@ class ImagePagerAdapter(private val context: Context, private val imageAdapter: 
             index++
         }
         return String.format("%.2f %s", fileSize, units[index])
+    }
+
+    private fun getImageDate(context: Context, resourceId: Int): String? {
+        val uri = Uri.parse("android.resource://${context.packageName}/$resourceId")
+        val inputStream: InputStream? = context.contentResolver.openInputStream(uri)
+
+        try {
+            val metadata = ImageMetadataReader.readMetadata(inputStream)
+
+            val directory = metadata.getFirstDirectoryOfType(ExifSubIFDDirectory::class.java)
+            val date = directory?.getDate(ExifSubIFDDirectory.TAG_DATETIME_ORIGINAL)
+
+            return date?.toString() ?: "Date information not available"
+        } catch (e: Exception) {
+            e.printStackTrace()
+            return "Date information not available"
+        } finally {
+            inputStream?.close()
+        }
     }
 
     override fun isViewFromObject(view: View, `object`: Any): Boolean {
