@@ -50,12 +50,16 @@ class ImagePagerAdapter(private val context: Context, private val imageAdapter: 
         val imageSize = getImageSize(context, imageResId)
         val imageSizeText = "${imageSize.first} x ${imageSize.second}"
         val imageFileSize = getImageFileSize(context, imageResId)
-        val imageDate = getImageDate(context, imageResId)
+        if (getImageDate(context, imageResId) != null) {
+            val imageDate = getImageDate(context, imageResId)
+            view.findViewById<TextView>(R.id.imageDateTextView).text = "$imageDate"
+        } else {
+            view.findViewById<TextView>(R.id.imageDateTextView).visibility = View.GONE
+        }
 
         view.findViewById<TextView>(R.id.imageNameTextView).text = "$imageName"
         view.findViewById<TextView>(R.id.imageSizeTextView).text = "$imageSizeText"
         view.findViewById<TextView>(R.id.imageFileSizeTextView).text = "$imageFileSize"
-        view.findViewById<TextView>(R.id.imageDateTextView).text = "$imageDate"
 
         // Make sure the bottom sheet is displayed above the ViewPager
         ViewCompat.setNestedScrollingEnabled(view.findViewById(R.id.bottomSheetLayout), true)
@@ -99,7 +103,7 @@ class ImagePagerAdapter(private val context: Context, private val imageAdapter: 
             val directory = metadata.getFirstDirectoryOfType(ExifSubIFDDirectory::class.java)
             val date = directory?.getDate(ExifSubIFDDirectory.TAG_DATETIME_ORIGINAL)
 
-            return date?.toString() ?: "Date information not available"
+            return date?.toString()
         } catch (e: Exception) {
             e.printStackTrace()
             return "Date information not available"
