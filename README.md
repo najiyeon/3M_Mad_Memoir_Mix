@@ -8,7 +8,7 @@
 
 <br/>
 
-**3M: Mad Memoir Mix**는 3개의 **M**(**Member, Memory, Minigame**)으로 구성된 앱으로, 몰입캠프 참가자들 간의 연결을 해주는 앱입니다.
+**3M: Mad Memoir Mix**는 3개의 **M**(**Member, Memory, Minigame**)으로 구성된 앱으로, 몰입캠프 구성원 간에 유대를 쌓고 추억을 기록하는 공간입니다.
 
 <br/>
 
