@@ -5,7 +5,9 @@ import android.content.Intent
 import android.view.View
 import android.view.ViewGroup
 import android.widget.BaseAdapter
+import android.widget.FrameLayout
 import android.widget.ImageView
+import androidx.core.content.ContextCompat
 import com.bumptech.glide.Glide
 
 class ImageAdapter(private val context: Context) : BaseAdapter() {
@@ -74,16 +76,29 @@ class ImageAdapter(private val context: Context) : BaseAdapter() {
     }
 
     override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
+        val frameLayout: FrameLayout
         val imageView: ImageView
+
         if (convertView == null) {
+            frameLayout = FrameLayout(context)
+            frameLayout.layoutParams = ViewGroup.LayoutParams(
+                ViewGroup.LayoutParams.WRAP_CONTENT,
+                ViewGroup.LayoutParams.WRAP_CONTENT
+            )
+
             imageView = ImageView(context)
             imageView.layoutParams = ViewGroup.LayoutParams(targetImageSize, targetImageSize)
             imageView.setPadding(8, 8, 8, 8)
-        } else {
-            imageView = convertView as ImageView
-        }
+            imageView.scaleType = scaleType
 
-        imageView.scaleType = scaleType
+            // Add foreground to the FrameLayout to enable ripple effect
+            frameLayout.foreground = ContextCompat.getDrawable(context, R.drawable.ripple_effect)
+
+            frameLayout.addView(imageView)
+        } else {
+            frameLayout = convertView as FrameLayout
+            imageView = frameLayout.getChildAt(0) as ImageView
+        }
 
         // Load and set the image for the current position using Glide
         val imageResId = dummyImages[position]
@@ -92,15 +107,16 @@ class ImageAdapter(private val context: Context) : BaseAdapter() {
             .into(imageView)
 
         // Handle item click to show larger view
-        imageView.setOnClickListener {
+        frameLayout.setOnClickListener {
             // Pass both imageResId and position to ImageDetailActivity
             val intent = Intent(context, ImageDetailActivity::class.java)
             intent.putExtra(ImageDetailActivity.EXTRA_POSITION, position)
             context.startActivity(intent)
         }
 
-        return imageView
+        return frameLayout
     }
+
 
     fun setScaleType(newScaleType: ImageView.ScaleType) {
         scaleType = newScaleType
