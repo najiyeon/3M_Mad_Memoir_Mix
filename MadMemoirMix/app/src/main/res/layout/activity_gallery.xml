@@ -30,7 +30,7 @@
         android:id="@+id/galleryTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Gallery"
+        android:text="Memory"
         android:textAppearance="@style/title_"
         android:lineSpacingExtra="-1sp"
         android:gravity="center_vertical"
