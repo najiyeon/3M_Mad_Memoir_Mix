@@ -18,7 +18,7 @@ class ImageDetailActivity : AppCompatActivity() {
             finish()
         }
 
-        val imageAdapter = ImageAdapter(this, intent.getIntExtra(FOLDER_POSITION, 0))
+        val imageAdapter = ImageAdapter(this)
         val viewPager: ViewPager = findViewById(R.id.viewPager)
         val imagePagerAdapter = ImagePagerAdapter(this, imageAdapter)
         viewPager.adapter = imagePagerAdapter
@@ -36,6 +36,5 @@ class ImageDetailActivity : AppCompatActivity() {
 
     companion object {
         const val EXTRA_POSITION = "extra_position"
-        const val FOLDER_POSITION = "folder_position"
     }
 }
