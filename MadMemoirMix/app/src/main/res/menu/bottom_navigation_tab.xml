@@ -6,13 +6,13 @@
         app:showAsAction="always"
         android:enabled="true"
         android:icon="@drawable/icon_contact"
-        android:title="Contact"/>
+        android:title="Member"/>
     <item
         android:id="@+id/menu_Gallery"
         app:showAsAction="always"
         android:enabled="true"
         android:icon="@drawable/icon_gallery"
-        android:title="Gallery"/>
+        android:title="Memory"/>
     <item
         android:id="@+id/menu_MiniGame"
         app:showAsAction="always"

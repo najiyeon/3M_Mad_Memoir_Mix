@@ -47,7 +47,7 @@
         android:id="@+id/contactTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Contact List"
+        android:text="Member"
         android:textAppearance="@style/title_"
         android:lineSpacingExtra="-1sp"
         android:gravity="center_vertical"
